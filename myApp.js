@@ -37,6 +37,13 @@ app.get('/:word/echo', function(req, res){
     res.json({'echo': req.params.word})
 })
 
+app.get('/name', function(req, res){
+    const { first: firstName, last: lastName } = req.query;
+    res.json({
+        name: `${firstName} ${lastName}`
+      });
+})
+
 
 
 
